@@ -7,7 +7,7 @@ n = input("Введите целое положительное число: ")
 max_digit = -1
 if n.isdigit():
     nn = int(n)
-    while nn > 10:
+    while nn > 0:
         cur_digit = nn % 10
         nn //= 10
         if cur_digit > max_digit:
