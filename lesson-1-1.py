@@ -20,5 +20,5 @@ d = input("Введите вещественное число: \n")
 
 print("1:'" + a + "'")
 print("2:'" + b + "'")
-print(f"1: {int(float(c))}")
-print(f"2: {float(d)}")
+print(f"3: {int(float(c))}")
+print(f"4: {float(d)}")
