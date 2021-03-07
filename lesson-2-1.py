@@ -12,5 +12,5 @@ my_list.append(['a', 'b'])
 my_list.insert(0, {1, 2})
 my_list[1] = (5,)
 print(f"СПИСОК:\n{my_list}\n")
-for el_desc in (f'Тип {ind:2}-го элемента - {type(el)}' for ind, el in enumerate(my_list, 1)):
+for el_desc in (f'Тип {ind:2}-го элемента  {str(el):>10} - {type(el)}' for ind, el in enumerate(my_list, 1)):
     print(el_desc)
