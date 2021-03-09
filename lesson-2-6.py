@@ -58,4 +58,5 @@ while work:
             tov_list = [tov.get(desc) for tov in goods_list]
             analisis.append((desc, list(set(tov_list))))
             tov_list.clear()
-        print(dict(analisis))
+        for str_out in (f"'{desc[0]:20}': {desc[1]}" for desc in analisis):
+            print(str_out)
