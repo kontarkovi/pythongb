@@ -59,10 +59,3 @@ while work:
             analisis.append((desc, list(set(tov_list))))
             tov_list.clear()
         print(dict(analisis))
-
-
-
-"""
-desc_set = {desc for desc in goods_dict.values()}
-print(list(goods_dict.values())[0])
-"""
