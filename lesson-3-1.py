@@ -17,11 +17,10 @@ def divide2dig(x, y):
         print("ОШИБКА! Не является числом!")
 
 
-digits = []
+
 try:
-    for _ in (digits.append(float(input(f'Введите число {"X" if ind == 0 else "Y"} : '))) for ind in range(0, 2)):
-        pass
-    print(digits)
+    digits = [float(input(f'Введите число {"X" if ind == 0 else "Y"} : ')) for ind in range(0, 2)]
+    # print(digits)
     x, y = digits[0], digits[1]
     print(f"ДЕЛЕНИЕ: {x} / {y} = {divide2dig(x, y)}")
     print('--',divide2dig.__doc__)
