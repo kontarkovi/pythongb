@@ -15,4 +15,4 @@ user_desc = ['имя', 'фамилия', 'год рождения', 'город 
 print("ВВЕДИТЕ ДАННЫЕ")
 user_data = {desc: input(f"{desc.upper():16} : ").lower() for desc in user_desc}
 print(printout_udata(surname=user_data['фамилия'], name=user_data['имя'], birth_year=user_data['год рождения'],
-               phone=user_data['телефон'], city=user_data['город проживания'], email=user_data['email']))
+                     phone=user_data['телефон'], city=user_data['город проживания'], email=user_data['email']))
