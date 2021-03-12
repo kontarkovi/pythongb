@@ -35,8 +35,8 @@ try:
     X = float(input("X = "))
     Y = int(input("Y = "))
     print("РЕЗУЛЬТАТ")
-    print(f"С оператором  '**':", raise_to_neg(X, Y, '**'))
-    print(f"БЕЗ оператора '**':", raise_to_neg(X, Y))
+    print(f"С оператором  '**': {raise_to_neg(X, Y, '**'):.4}")
+    print(f"БЕЗ оператора '**': {raise_to_neg(X, Y):.4}")
     print('--', raise_to_neg.__doc__)
 except ValueError:
     print("ОШИБКА! Введите числовые значения!")
