@@ -3,7 +3,6 @@
 """
 Реализовать функцию my_func(), которая принимает три позиционных аргумента, и возвращает сумму наибольших двух
 """
-from typing import List, Any
 
 
 def my_func(x, y, z):
@@ -14,7 +13,7 @@ def my_func(x, y, z):
 
 try:
     print("ВВЕДИТЕ ТРИ ЧИСЛА:")
-    my_list = [float(input(f"{i+1} : ")) for i in range(0,3) ]
+    my_list = [float(input(f"{i + 1} : ")) for i in range(0, 3)]
     print(f"Сумма наибольших двух = {my_func(my_list[0], my_list[1], my_list[2])}")
 except ValueError:
     print("ОШИБКА! Вводите числа!")
