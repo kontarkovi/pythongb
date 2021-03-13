@@ -6,9 +6,10 @@
 """
 
 
-def printout_udata(name, surname, birth_year, city, email, phone):
-    return f"Фамилия: {surname.upper()}, Имя: {name.upper()}, Год рождения: {birth_year:4}, " \
-           f"Город проживания: {city.upper()}, email: {email}, телефон: {phone}"
+def printout_udata(**kwargs):
+    return f"Фамилия: {kwargs['surname'].upper()}, Имя: {kwargs['name'].upper()}, " \
+           f"Год рождения: {kwargs['birth_year']:4}, Город проживания: {kwargs['city'].upper()}, " \
+           f"email: {kwargs['email']}, телефон: {kwargs['phone']}"
 
 
 user_desc = ['имя', 'фамилия', 'год рождения', 'город проживания', 'email', 'телефон']
