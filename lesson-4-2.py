@@ -10,4 +10,4 @@
 Результат: [12, 44, 4, 10, 78, 123]
 """
 source_list = [300, 2, 12, 44, 1, 1, 4, 10, 7, 1, 78, 123, 55]
-print(new_list := [source_list[ind] for ind in range(1, len(source_list)) if source_list[ind] > source_list[ind-1]])
+print([source_list[ind] for ind in range(1, len(source_list)) if source_list[ind] > source_list[ind-1]])
