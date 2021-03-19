@@ -7,7 +7,7 @@
 """
 
 try:
-    with open("text_3.txt", "r", encoding="utf-8") as f_obj:
+    with open("text_3.txt", "r", encoding="utf-8") as f_obj:  # ФАЙЛ "text_3.txt" предоставлен преподавателем
         income = 0
         surname_min = []
         content = f_obj.readlines()
