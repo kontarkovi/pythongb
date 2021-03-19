@@ -53,4 +53,4 @@ try:
             num_list = [to_float(el.strip().split(chr(45))[1]) for el in content]
             print(f"Сумма чисел в файле: {sum(num_list)}")
 except IOError:
-    print("Ошибка ввода-вывода")
+    print("Ошибка ввода-вывода!")
