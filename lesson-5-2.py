@@ -13,7 +13,7 @@ from string import punctuation
 
 def rm_punctuation(my_str: str):
     for el in punctuation:
-        my_str.replace(el, chr(32))
+        my_str = my_str.replace(el, chr(32))
     return my_str
 
 
