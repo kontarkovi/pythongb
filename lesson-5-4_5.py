@@ -40,17 +40,17 @@ def to_float(str_num: str):
 try:
     with open("text_4.txt", "r", encoding="utf-8") as f_read:  # ФАЙЛ "text_4.txt" предоставлен преподавателем
         eof = False
-        with open("les54.txt", "a", encoding="utf-8") as f_write:
+        with open("les54.txt", "a+", encoding="utf-8") as f_rw:
             while not eof:
                 f_str = f_read.readline()
-                f_write.write(num_replace(f_str, en_ru_dict))
+                f_rw.write(num_replace(f_str, en_ru_dict))
                 eof = not bool(f_str)
 
-    # В задании 5 указано создать набор чисел, разделенных пробелами
-    # Воспользуемся только что созданным файлом. Но вместо пробелов используем разделитель chr(45)
-    with open("les54.txt", "r", encoding="utf-8") as f_read:
-        content = f_read.readlines()
-        num_list = [to_float(el.strip().split(chr(45))[1]) for el in content]
-        print(f"Сумма чисел в файле: {sum(num_list)}")
+        # В задании 5 указано создать программно набор чисел, разделенных пробелами
+        # Воспользуемся только что созданным файлом. Но вместо пробелов используем разделитель chr(45)
+            f_rw.seek(0)
+            content = f_rw.readlines()
+            num_list = [to_float(el.strip().split(chr(45))[1]) for el in content]
+            print(f"Сумма чисел в файле: {sum(num_list)}")
 except IOError:
     print("Ошибка ввода-вывода")
