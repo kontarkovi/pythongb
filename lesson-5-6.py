@@ -39,8 +39,11 @@ def get_dig_list(my_list):
 
 
 try:
-    with open("text_6.txt", "r", encoding="utf-8") as f_obj:
-        content = f_obj.readlines()
+    with open("text_6.txt", "r", encoding="utf-8") as f_obj:  # ФАЙЛ "text_6.txt" предоставлен преподавателем
+        content = f_obj.readlines()  # Получаем список строк. Строка - данные об учебном ПРЕДМЕТе
+        # Для каждого ПРЕДМЕТа определяем его НАЗВАНИЕ
+        # Преобразуем строку ПРЕДМЕТа в список ЗНАЧИМЫХ для учебного предмета ЦИФР
+        # Формируем словарь
         subj_dict = {subj[:subj.find(':')]: int(sum(get_dig_list(rm_punctuation(subj).split())))for subj in content}
         print(subj_dict)
 except IOError:
