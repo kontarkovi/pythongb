@@ -23,17 +23,14 @@ def to_float(str_num: str):
 
 class Worker:
 
-    def __init__(self, name, surname, position, wage, bonus):
-        self.name = name
-        self.surname = surname
-        self.position = position
+    def __init__(self, name: str, surname: str, position: str, wage: float, bonus: float):
+        self.name = name.strip()
+        self.surname = surname.strip()
+        self.position = position.strip()
         self._income = {"wage": wage, "bonus": bonus}
 
 
 class Position(Worker):
-
-    def __init__(self, name: str, surname: str, position: str, wage: float, bonus: float):
-        super().__init__(name.strip(), surname.strip(), position.strip(), wage, bonus)
 
     def get_full_name(self):
         return self.name.lower().capitalize() + chr(32) + self.surname.lower().capitalize()
