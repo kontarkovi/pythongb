@@ -30,6 +30,7 @@ class Matrix:
         # [[A11, ..., A1j], ..., [Ai1, ..., Aij]], где i - номер строки, j - номер столбца
         self.__mx = args[0]
 
+    # Перегружаем метод __call__() для обращения к элементу матрицы в виде вызова функции
     def __call__(self, *args, **kwargs):
         return self.__mx[args[0]][args[1]]
 
