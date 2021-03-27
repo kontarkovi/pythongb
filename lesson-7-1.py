@@ -53,5 +53,5 @@ mx_list = [Matrix([[randint(-100, 100) for j in range(4)] for i in range(3)]) fo
 print(mx_list)
 for mx in mx_list:
     print(mx, "\n")
-print("РЕЗУЛЬТАТ СЛОЖЕНИЯ МАТРИЦЫ 3 и 4:\n")
+print("РЕЗУЛЬТАТ СЛОЖЕНИЯ МАТРИЦ 3 и 4:\n")
 print(mx_list[2] + mx_list[3])
