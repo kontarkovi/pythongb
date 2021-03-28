@@ -50,6 +50,8 @@ class Cell:
         if self.points - other.points > 0:
             return Cell(self.points - other.points)
         else:
+            # Клетка не может быть образована, поэтому нужно ввернуть None
+            # Возвращаемый результат обязательно обрабатывать!
             print("Нельзя образовать новую клетку! Вычитаемое - Ноль или Меньше ноля.")
 
     def __mul__(self, other):
@@ -59,6 +61,8 @@ class Cell:
         try:
             return Cell(self.points // other.points)
         except ZeroDivisionError:
+            # Клетка не может быть образована, поэтому нужно ввернуть None
+            # Возвращаемый результат обязательно обрабатывать!
             print("Нельзя образовать новую клетку! Деление на ноль.")
 
     def make_order(self, raw=0):
