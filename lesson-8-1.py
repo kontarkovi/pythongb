@@ -62,12 +62,15 @@ class MyDate:
 
 md = MyDate('')
 print('Инициализированная строка:', md.raw_str_date)
+
 # Валидация года
 print('Принятая дата:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
+
 # Валидация месяца
 md = MyDate('30-13-1970')
 print('Инициализированная строка:', md.raw_str_date)
 print('Принятая дата:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
+
 # Валидация дня
 md = MyDate('29-02-2019')
 print('Инициализированная строка:', md.raw_str_date)
@@ -79,6 +82,6 @@ print('Инициализированная строка:', md.raw_str_date)
 print('Принятая дата:', MyDate.valid_date(md.yyyy, md.mm, md.dd))
 print('Актуальная дата, RU:', md.actual_date, '\n')
 
-md.yyyy, md.mm, md.dd = MyDate.to_digits('28-02-0345')
+md.yyyy, md.mm, md.dd = MyDate.to_digits('10-03-0345')
 print('Принятая дата:', MyDate.valid_date(md.yyyy, md.mm, md.dd))
 print('Актуальная дата, RU:', md.actual_date, '\n')
