@@ -43,7 +43,7 @@ class MyDate:
         try:
             match = fullmatch(r'\d\d-\d\d-\d{4}', str_date)
             if not match:
-                raise MyDateErr(str_date + ' : Некорректный формат даты (ДД-ММ-ГГГГ) или значение')
+                raise MyDateErr(str_date + ' : Wrong date format. Correct format to DD-MM-YYYY')
             dd = int(match[0].split(chr(45))[0])
             mm = int(match[0].split(chr(45))[1])
             yyyy = int(match[0].split(chr(45))[2])
@@ -61,27 +61,26 @@ class MyDate:
 
 
 md = MyDate('')
-print('Инициализированная строка:', md.raw_str_date)
+print('Raw date string:', md.raw_str_date)
 
 # Валидация года
-print('Принятая дата:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
+print('Accepted date:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
 
 # Валидация месяца
 md = MyDate('30-13-1970')
-print('Инициализированная строка:', md.raw_str_date)
-print('Принятая дата:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
+print('Raw date string:', md.raw_str_date)
+print('Accepted date:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
 
 # Валидация дня
 md = MyDate('29-02-2019')
-print('Инициализированная строка:', md.raw_str_date)
-print('Принятая дата:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
+print('Raw date string:', md.raw_str_date)
+print('Accepted date:', md.valid_date(md.yyyy, md.mm, md.dd), '\n')
 
 # Исправляем актуальную дату
 md.yyyy, md.mm, md.dd = MyDate.to_digits('28-02-2019')
-print('Инициализированная строка:', md.raw_str_date)
-print('Принятая дата:', MyDate.valid_date(md.yyyy, md.mm, md.dd))
-print('Актуальная дата, RU:', md.actual_date, '\n')
+print('Accepted date:', MyDate.valid_date(md.yyyy, md.mm, md.dd))
+print('Actual date, RU:', md.actual_date, '\n')
 
 md.yyyy, md.mm, md.dd = MyDate.to_digits('10-03-0345')
-print('Принятая дата:', MyDate.valid_date(md.yyyy, md.mm, md.dd))
-print('Актуальная дата, RU:', md.actual_date, '\n')
+print('Accepted date:', MyDate.valid_date(md.yyyy, md.mm, md.dd))
+print('Actual date, RU:', md.actual_date, '\n')
