@@ -39,4 +39,3 @@ print('Сумма чисел 1 и 2:', cn1 + cn2)
 print('Произведение чисел 1 и 2:', cn1 * cn2)
 cn3 = ComplexNumber(randint(-100, 100), 0)
 print('Мнимое число 3:', cn3)
-
