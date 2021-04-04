@@ -15,7 +15,6 @@
 При этом работа скрипта не должна завершаться.
 """
 
-from random import random
 from re import fullmatch
 
 
